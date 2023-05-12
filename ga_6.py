@@ -1,8 +1,8 @@
 from deap import base, algorithms
 from deap import creator
 from deap import tools
-from ga_class import Genethic_algorithm
-import sys
+# from ga_class import Genethic_algorithm
+
 
 from graph_show import show_graph
 
@@ -21,7 +21,10 @@ D = ((0, 3, 1, 3, inf, inf),
      (inf, inf, 7, inf, 0, 4),
      (inf, inf, 5, 2, 4, 0))
 
-startV = 3              # стартовая вершина
+
+choice = input(": ")
+
+startV = int(choice)              # стартовая вершина
 LENGTH_D = len(D)
 LENGTH_CHROM = len(D)*len(D[0])    # длина хромосомы, подлежащей оптимизации
 
@@ -104,6 +107,8 @@ plt.ylabel('Макс/средняя приспособленность')
 plt.title('Зависимость максимальной и средней приспособленности от поколения')
 
 fig, ax = plt.subplots()
+
+
 show_graph(ax, best, startV)
 plt.show()
 

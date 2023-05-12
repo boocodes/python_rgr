@@ -1,5 +1,7 @@
 from matplotlib.lines import Line2D
 import sys
+import time
+import matplotlib.pyplot as plt
 
 vertex = ((0, 1), (1, 1), (0.5, 0.8), (0.1, 0.5), (0.8, 0.2), (0.4, 0))
 
@@ -7,6 +9,7 @@ vx = [v[0] for v in vertex]
 vy = [v[1] for v in vertex]
 
 def show_graph(ax, best, startV):
+  
     ax.add_line(Line2D((vertex[0][0], vertex[1][0]), (vertex[0][1], vertex[1][1]), color='#aaa'))
     ax.add_line(Line2D((vertex[0][0], vertex[2][0]), (vertex[0][1], vertex[2][1]), color='#aaa'))
     ax.add_line(Line2D((vertex[0][0], vertex[3][0]), (vertex[0][1], vertex[3][1]), color='#aaa'))
@@ -28,4 +31,9 @@ def show_graph(ax, best, startV):
             prev = j
 
     ax.plot(vx, vy, ' ob', markersize=15)
+
+
+
+
+    
     
